@@ -29,20 +29,20 @@ void loop() {
   zV = (analogRead(A2))*(5.0/1023); //get voltage
   zAcc = (zV - offset)/sens;
   Serial.print("Z acceleration is ");
-  Serial.println(zV);
+  Serial.println(zAcc);
   delay(500);
   //read acceleration in y
   yV = (analogRead(A1))*(5.0/1023); //get voltage
   yAccPrev = yAcc; //hold previous value
   yAcc = (yV - offset)/sens;
   Serial.print("Y acceleration is ");
-  Serial.println(yV);
+  Serial.println(yAcc);
   delay(500);
   //read acceleration in x
   xV = (analogRead(A0))*(5.0/1023); //get voltage
   xAcc = (xV - offset)/sens;
   Serial.print("X acceleration is ");
-  Serial.println(xV);
+  Serial.println(xAcc);
   delay(500);
   if (xAcc > 0.3)
   {
